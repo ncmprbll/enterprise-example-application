@@ -5,6 +5,18 @@ body {
     box-sizing: border-box;
 }
 
+label {
+    font-size: 1.5em;
+    padding-left: 1em;
+}
+
+input {
+    display: block;
+    margin-bottom: 1em;
+    width: 100%;
+    font-size: 1.25em
+}
+
 h1 {
     padding: 0;
     margin: 0;
@@ -15,11 +27,8 @@ a {
 }
 
 a, a:visited {
+    position: fixed;
     color: #eee;
-}
-
-a:hover {
-    background: #565656;
 }
 
 .container {
@@ -30,7 +39,8 @@ a:hover {
     text-align: center;
 }
 
-.container a {
+.container a, input[type="submit"] {
+    position: static;
     display: flex;
     align-items: center;
     border-radius: 8px;
@@ -39,4 +49,20 @@ a:hover {
     min-height: 3em;
     padding-left: 1em;
     border-top: 2px solid #565656;
+}
+
+input[type="submit"] {
+    display: block;
+    text-align: center;
+    margin: 1em 0 0 0;
+    font-size: 1.5em;
+    color: #eee;
+    background-color: #303030;
+    width: 100%;
+    border: none;
+    border-top: 2px solid #565656;
+}
+
+.container a:hover, input[type="submit"]:hover {
+    background: #565656;
 }

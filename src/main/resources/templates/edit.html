@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit page</title>
+    <link href="main.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <a href="/"><h1>Go back</h1></a>
+    <div class="container">
+        <h1>Fill in the form</h1>
+        <form action="/edit" method="post">
+            <label for="id">ID:</label>
+            <input id="id" type="text" name="id">
+            <label for="brand">Brand:</label>
+            <input id="brand" type="text" name="brand">
+            <label for="model">Model:</label>
+            <input id="model" type="text" name="model">
+            <label for="country">Country of origin:</label>
+            <input id="country" type="text" name="country">
+            <label for="price">Price:</label>
+            <input id="price" type="text" name="price">
+            <input type="submit" value="Edit a coffee machine">
+        </form>
+    </div>
+</body>
+</html>
