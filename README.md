@@ -11,8 +11,9 @@ This is an example Spring Boot web application backed by a PostgreSQL database. 
 
 ## Manual launching
 
-I haven't tried these steps myself but I imagine they are correct.
+I haven't tried these steps myself, but I imagine they are correct.
 
+- Start up a database
 - Configure the `src/main/resources/application.properties` file to your needs
 - Build the project with `mvn clean package`
 - Execute `java -jar target/enterprise-example-application.jar` and the app will be running in a few seconds
