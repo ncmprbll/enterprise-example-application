@@ -15,7 +15,13 @@ public class CoffeeMachineService {
     JdbcTemplate jdbcTemplate;
 
     public List<CoffeeMachine> findAll() {
-        return jdbcTemplate.query("SELECT * FROM coffee_machines", new BeanPropertyRowMapper<>(CoffeeMachine.class));
+        return jdbcTemplate.query("SELECT * FROM coffee_machines",
+                new BeanPropertyRowMapper<>(CoffeeMachine.class));
+    }
+
+    public List<CoffeeMachine> findByCountry(String country) {
+        return jdbcTemplate.query("SELECT * FROM coffee_machines WHERE country_of_origin LIKE '%' || ? || '%'",
+                new BeanPropertyRowMapper<>(CoffeeMachine.class), country);
     }
 
     public int insert(CoffeeMachine cm) {

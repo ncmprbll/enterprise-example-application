@@ -74,7 +74,8 @@ public class AppController {
     }
 
     @GetMapping("/list")
-    public String getList() {
+    public String getList(@RequestParam(required = false) String country, Model model) {
+        model.addAttribute("coffee_machines", country == null ? service.findAll() : service.findByCountry(country));
         return "list";
     }
 }
