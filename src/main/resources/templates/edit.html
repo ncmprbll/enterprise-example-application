@@ -9,17 +9,18 @@
     <a href="/"><h1>Go back</h1></a>
     <div class="container">
         <h1>Fill in the form</h1>
-        <form action="/edit" method="post">
+        <h2 th:text="${message}"></h2>
+        <form th:action="@{/edit}" method="post" th:object="${coffee_machine}">
             <label for="id">ID:</label>
-            <input id="id" type="text" name="id">
+            <input id="id" type="number" name="id" min="1" minlength="1" required th:field="*{id}">
             <label for="brand">Brand:</label>
-            <input id="brand" type="text" name="brand">
+            <input id="brand" type="text" name="brand" minlength="1" maxlength="16" th:field="*{brand}">
             <label for="model">Model:</label>
-            <input id="model" type="text" name="model">
+            <input id="model" type="text" name="model" minlength="1" maxlength="16" th:field="*{model}">
             <label for="country">Country of origin:</label>
-            <input id="country" type="text" name="country">
+            <input id="country" type="text" name="country" minlength="1" maxlength="16" th:field="*{countryOfOrigin}">
             <label for="price">Price:</label>
-            <input id="price" type="text" name="price">
+            <input id="price" type="number" name="price" min="1" th:field="*{price}">
             <input type="submit" value="Edit a coffee machine">
         </form>
     </div>

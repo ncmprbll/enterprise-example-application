@@ -1,7 +1,5 @@
 package org.example.models;
 
-import java.util.Objects;
-
 public class CoffeeMachine {
     private Integer id;
     private String brand;
