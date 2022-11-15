@@ -1,18 +1,12 @@
 package org.example.models;
 
-/**
- * Coffee machine class
- */
+import java.util.Objects;
+
 public class CoffeeMachine {
-    /** ID */
     private Integer id;
-    /** Brand of a coffee machine */
     private String brand;
-    /** Model of a coffee machine */
     private String model;
-    /** Country of origin of a coffee machine */
     private String countryOfOrigin;
-    /** Price of a coffee machine */
     private Double price;
 
     public CoffeeMachine(Integer id, String brand, String model, String countryOfOrigin, Double price) {

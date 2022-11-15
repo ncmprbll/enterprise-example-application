@@ -35,7 +35,7 @@ a, a:visited {
     margin: 0 30%;
 }
 
-.container h1 {
+.container h1, .container h2 {
     text-align: center;
 }
 
