@@ -1,6 +1,6 @@
-package org.example.controllers;
+package org.example.controller;
 
-import org.example.models.CoffeeMachine;
+import org.example.model.CoffeeMachine;
 import org.example.service.CoffeeMachineService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
