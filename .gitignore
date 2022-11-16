@@ -24,5 +24,3 @@ hs_err_pid*
 
 # Project-specific files and directories
 target/
-.env
-src/main/resources/application.properties
